@@ -1,0 +1,50 @@
+Queries:
+
+Create 3 new dojos:
+1. Dojos.objects.create(name="big", city="orange", state="CA")
+2. Dojos.objects.create(name="ayyy", city="costa_mesa", state="CA")
+3. Dojos.objects.create(name="small", city="upland", state="CA")
+
+Delete the 3 dojos you just created.
+1. d = Dojos.objects.get(id=1)
+   d.delete()
+2. d = Dojos.objects.get(id=2)
+   d.delete()
+3. d = Dojos.objects.get(id=3)
+   d.delete()
+
+Create 3 more dojos.
+1. Dojos.objects.create(name="big", city="orange", state="CA")
+2. Dojos.objects.create(name="ayyy", city="costa_mesa", state="CA")
+3. Dojos.objects.create(name="small", city="upland", state="CA")
+
+Create 3 ninjas that belong to the first dojo.
+1. Ninjas.objects.create(dojos_id="1", first_name="Mitch", last_name="G")"
+2.Ninjas.objects.create(dojos_id="1", first_name="Rex", last_name="B")
+3.Ninjas.objects.create(dojos_id="1", first_name="Zeph", last_name="Q")
+
+Create 3 ninjas that belong to the second dojo.
+1. Ninjas.objects.create(dojos_id="2", first_name="Paul", last_name="Blurnt")
+2.Ninjas.objects.create(dojos_id="2", first_name="Sally", last_name="Wally")
+3.Ninjas.objects.create(dojos_id="2", first_name="Pill", last_name="Cosby")
+
+
+Create 3 ninjas that belong to the third dojo.
+1. Ninjas.objects.create(dojos_id="3", first_name="Goose", last_name="Loose")
+2.Ninjas.objects.create(dojos_id="3", first_name="Mike", last_name="Who")
+3.Ninjas.objects.create(dojos_id="3", first_name="steve", last_name="leave")
+
+
+Retrieve all the ninjas from the first dojo.
+
+1.Ninjas.objects.filter(dojos_id=1).values()
+
+Retrieve all the ninjas from the last dojo.
+1.Ninjas.objects.filter(dojos_id=3).values()
+
+Retrieve the last ninja's dojo.
+1.Ninjas.objects.last().dojos.name
+
+Add a new text field called "desc" to your Dojo class.
+
+

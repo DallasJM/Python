@@ -1,0 +1,17 @@
+Queries :
+
+Retrieve all the users.
+User.objects.all().values()
+
+Retrieve the last user.
+User.objects.filter(id="3")
+
+Retrieve the first user.
+User.objects.filter(id=“1”)
+
+Delete the user with id=2 from the database.
+c=User.objects.get(id=2)
+c.delete()
+
+Get all the users, sorted by their first name.
+User.objects.order_by("first_name")
